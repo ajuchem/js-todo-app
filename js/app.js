@@ -1,6 +1,10 @@
 // Problem: user interaction doesnt provide desired results.
 // Solution: add interactivity so the user can manage daily tasks.
 
+var taskInput; // new-task
+var addButton; // first btn
+var incompleteTasksHolder; // incomplete-task
+var completedTasksHolder; // completed-taskcreate a to-do list application using JavaScript alone, without using any third party libraries.
 // Add a new task
 var addTask = function() {
   // When button is pressed
