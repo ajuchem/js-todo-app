@@ -9,14 +9,23 @@ var completedTasksHolder = document.getElementById('completed-tasks'); // comple
 // New task list item
 var createNewTaskElement = function(taskString) {
   // create list item
-  var listItem = ;
+  var listItem = document.createElement('li');
 
   // input (checkbox)
+  var checkBox = document.createElement('input');
   // label
+  var label = document.createElement('label');
   // input (text)
+  var editInput = document.createElement('input');
   // button.edit
+    var editButton = document.createElement('button');
   // button.delete
-  // each element needs to be modified and appended
+    var deleteButton = document.createElement('button');
+
+  // each element needs modifying
+
+  // each element needs appending
+
   return listItem;
 }
 
@@ -27,6 +36,7 @@ var addTask = function() {
   var listItem = createNewTaskElement('Some new task');
 
   // append list item to incompleteTasksHolder
+
 }
 
 // Edit an existing task
