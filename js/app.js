@@ -52,6 +52,8 @@ var addTask = function() {
   // Append list item to incompleteTasksHolder
   incompleteTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
+
+  taskInput.value = '';
 }
 
 // Edit an existing task
@@ -77,7 +79,7 @@ var editTask = function() {
     }
 
   // Toggle .editMode on the list item
-  listItem.classList.toggle('editMode');  
+  listItem.classList.toggle('editMode');
 }
 
 // Delete an existing task
