@@ -80,6 +80,7 @@ var editTask = function() {
 
   // Toggle .editMode on the list item
   listItem.classList.toggle('editMode');
+
 }
 
 // Delete an existing task
@@ -127,8 +128,13 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
   checkBox.onchange = checkBoxEventHandler;
 }
 
+var ajaxRequest = function() {
+  console.log('AJAX request');
+}
+
 // Set the click handler to the addTask function
-addButton.onclick = addTask;
+addButton.addEventListener('click', addTask);
+addButton.addEventListener('click', ajaxRequest);
 
 // Cycle over incompleteTasksHolder ul list items
 for (var i= 0; i < incompleteTasksHolder.children.length; i++) {
