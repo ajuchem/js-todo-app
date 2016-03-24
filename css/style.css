@@ -1,13 +1,16 @@
 /* Basic Style */
 body {
   background: #fff;
-  color: #333;
+  color: #0588df;
   font-family: Lato, sans-serif;
 }
 .container {
   display: block;
   width: 400px;
   margin: 100px auto 0;
+  padding: 20px;
+  border: 2px #FA7720 dotted;
+  border-radius: 5px;
 }
 ul {
   margin: 0;
@@ -26,7 +29,7 @@ input, button {
 button {
   background: none;
   border: 0px;
-  color: #888;
+  color: #FA7720;
   font-size: 15px;
   width: 60px;
   margin: 10px 0 0;
@@ -34,15 +37,15 @@ button {
   cursor: pointer;
 }
 button:hover {
-  color: #333;
+  color: #0588df;
 }
 /* Heading */
 h3,
 label[for='new-task'] {
-  color: #333;
+  color: #0588df;
   font-weight: 700;
   font-size: 15px;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #0588df;
   padding: 30px 0 10px;
   margin: 0;
   text-transform: uppercase;
@@ -57,10 +60,10 @@ input[type="text"] {
   background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
-  color: #888;
+  color: #FA7720;
 }
 input[type="text"]:focus {
-  color: #333;
+  color: #024b7d;
 }
 
 /* New Task */
