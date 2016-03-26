@@ -3,6 +3,7 @@
 
 var taskInput = document.getElementById('new-task'); // new-task
 var addButton = document.getElementsByTagName('button')[0]; // first button
+addButton.disabled = true;
 var incompleteTasksHolder = document.getElementById('incomplete-tasks'); // incomplete-task
 var completedTasksHolder = document.getElementById('completed-tasks'); // completed-task
 
@@ -61,20 +62,21 @@ var editTask = function() {
   console.log('Edit task...');
 
   var listItem = this.parentNode;
-
+  var editButton = listItem.querySelector('button.edit');
   var editInput = listItem.querySelector('input[type=text]');
   var label = listItem.querySelector('label');
-
   var containsClass = listItem.classList.contains('editMode');
 
   // If parent class .editMode
   if(containsClass) {
     // Switch from .editMode
     // Label text become input's value
+    editButton.innerText = "Edit";
     label.innerText = editInput.value;
   } else {
     // Switch to .editMode
     // Input value becomes labe's text
+    editButton.innerText = "Save";
     editInput.value = label.innerText;
     }
 
@@ -135,6 +137,15 @@ var ajaxRequest = function() {
 // Set the click handler to the addTask function
 addButton.addEventListener('click', addTask);
 addButton.addEventListener('click', ajaxRequest);
+
+// This will monitor the task input box and disable/unable button
+taskInput.addEventListener('input', function() {
+  if(this.value === "") {
+    addButton.disabled = true;
+  } else {
+    addButton.disabled = false;
+  }
+})
 
 // Cycle over incompleteTasksHolder ul list items
 for (var i= 0; i < incompleteTasksHolder.children.length; i++) {

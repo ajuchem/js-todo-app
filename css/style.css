@@ -79,6 +79,12 @@ p > button:hover {
   color: #0FC57C;
 }
 
+p > button:disabled {
+  color: red;
+  cursor: default;
+  opacity: .25;
+}
+
 /* Task list */
 li {
   overflow: hidden;
